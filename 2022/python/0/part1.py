@@ -1,4 +1,4 @@
-def part2(input_filepath="input"):
+def part1(input_filepath="../../data/0/input"):
     with open(input_filepath) as f:
         data = list(map(int, f.readlines()))
 
@@ -10,6 +10,6 @@ if __name__ == "__main__":
 
     X = []
     tc = unittest.TestCase()
-    tc.assertEqual(part2("test_input"), X)
+    tc.assertEqual(part1("../../data/0/test_input"), X)
 
-    print(f"The result is {part2()}")
+    print(f"The result is {part1()}")
