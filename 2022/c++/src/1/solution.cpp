@@ -6,7 +6,7 @@
 
 #include <solution.hpp>
 
-int part1(const fs::path &inputPath) {
+const std::string part1(const fs::path &inputPath) {
     if (!fs::is_regular_file(inputPath)) {
         std::cout << "Cannot read input file: " << inputPath;
         exit(1);
@@ -24,12 +24,12 @@ int part1(const fs::path &inputPath) {
         }
     }
 
-    return *std::max_element(calories.begin(), calories.end());
+    return std::to_string(*std::max_element(calories.begin(), calories.end()));
 }
 
-int test_part1_expected() { return 24000; }
+const std::string test_part1_expected() { return "24000"; }
 
-int part2(const fs::path &inputPath) {
+const std::string part2(const fs::path &inputPath) {
     if (!fs::is_regular_file(inputPath)) {
         std::cout << "Cannot read input file: " << inputPath;
         exit(1);
@@ -47,7 +47,7 @@ int part2(const fs::path &inputPath) {
         }
     }
     std::sort(calories.begin(), calories.end());
-    return std::reduce(calories.end() - 3, calories.end());
+    return std::to_string(std::reduce(calories.end() - 3, calories.end()));
 }
 
-int test_part2_expected() { return 45000; }
+const std::string test_part2_expected() { return "45000"; }

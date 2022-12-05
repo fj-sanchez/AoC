@@ -9,12 +9,12 @@
 
 namespace fs = std::filesystem;
 
-int part1(const fs::path &inputPath);
+const std::string part1(const fs::path &inputPath);
 
-int part2(const fs::path &inputPath);
+const std::string part2(const fs::path &inputPath);
 
-int test_part1_expected();
+const std::string test_part1_expected();
 
-int test_part2_expected();
+const std::string test_part2_expected();
 
 #endif //INC_2022_SOLUTION_HPP

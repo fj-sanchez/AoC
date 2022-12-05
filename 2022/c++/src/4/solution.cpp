@@ -18,7 +18,7 @@ void extractSectors(const std::string &line, std::array<int, 4> &sectors) {
                    [](auto const &m) { return stoi(m.str()); });
 }
 
-int part1(const fs::path &inputPath) {
+const std::string part1(const fs::path &inputPath) {
     if (!fs::is_regular_file(inputPath)) {
         std::cout << "Cannot read input file: " << inputPath;
         exit(1);
@@ -35,13 +35,13 @@ int part1(const fs::path &inputPath) {
         if ((s1_start <= s2_start && s1_end >= s2_end) || (s2_start <= s1_start && s2_end >= s1_end)) ++total;
     }
 
-    return total;
+    return std::to_string(total);
 }
 
 
-int test_part1_expected() { return 2; }
+const std::string test_part1_expected() { return "2"; }
 
-int part2(const fs::path &inputPath) {
+const std::string part2(const fs::path &inputPath) {
     if (!fs::is_regular_file(inputPath)) {
         std::cout << "Cannot read input file: " << inputPath;
         exit(1);
@@ -58,7 +58,7 @@ int part2(const fs::path &inputPath) {
         if (s1_start <= s2_end && s1_end >= s2_start) ++total;
     }
 
-    return total;
+    return std::to_string(total);
 }
 
-int test_part2_expected() { return 4; }
+const std::string test_part2_expected() { return "4"; }

@@ -14,13 +14,13 @@
 
 namespace fs = std::filesystem;
 
-extern int part1(const fs::path &inputPath);
+extern const std::string part1(const fs::path &inputPath);
 
-extern int part2(const fs::path &inputPath);
+extern const std::string part2(const fs::path &inputPath);
 
-extern int test_part1_expected();
+extern const std::string test_part1_expected();
 
-extern int test_part2_expected();
+extern const std::string test_part2_expected();
 
 const std::string TEST_INPUT_PATH = TOSTRING(TEST_INPUT);
 const std::string SOLUTION_INPUT_PATH = TOSTRING(SOLUTION_INPUT);
