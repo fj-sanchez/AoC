@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
 
 # CHANGEME: to something passed at compile time or similar
-set(day 0)
+set(day 6)
 
 set(This AoC22)
 project(${This})
